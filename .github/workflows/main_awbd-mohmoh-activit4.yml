@@ -29,7 +29,7 @@ jobs:
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
         
       - name: dotnet tool install -g dotnet-ef --version 7.0.14
-        run: dotnet tool install -g dotnet-ef
+        run: dotnet tool install -g dotnet-ef --version 7.0.14
 
       - name: dotnet bundle migration
         run: dotnet ef migration bundle --runtime linux-x64 - DotNetCoreSqldb.cdproj -o \${{env.DOTN_ROOT}}/myapp/migration
