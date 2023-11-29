@@ -28,7 +28,7 @@ jobs:
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
         
-      - name: dotnet tool install -g dotnet-ef --version 7.0.0
+      - name: dotnet tool install -g dotnet-ef --version 7.0.14
         run: dotnet tool install -g dotnet-ef
 
       - name: dotnet bundle migration
